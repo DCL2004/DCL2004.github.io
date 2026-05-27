@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Chenyu Lin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== UPPER: Hero / Bio ===== -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-photo">
+        <!-- Replace with your headshot -->
+        <!-- <div class="photo-placeholder">Photo</div> -->
+        <img src="photo1.jpg" alt="Daniel Chenyu Lin">
+      </div>
+      <div class="hero-text">
+        <h1>Daniel Lin 林宸宇</h1>
+        <p class="subtitle">B.A. Computer Science &amp; Mathematics · Cornell University</p>
+        <p>
+          I am a senior undergraduate student at Cornell University double-majoring in Computer Science and Mathematics.
+          I am advised by <a href="https://johnthickstun.com/">Dr. John Thickstun</a> on generative models
+          and music information retrieval.
+        </p>
+        <p>
+          My research centers on generative modeling and unsupervised learning, spanning both
+          applied and theoretical directions. On the applied side, I am interested in advancing
+          music technology and AI-generated art. On the theoretical side, I study how information
+          propagates through generative models, drawing on information-theoretic and geometric tools.
+        </p>
+        <div class="hero-links">
+          <a href="mailto:cl2765@cornell.edu">Email</a>
+          <a href="https://www.linkedin.com/in/daniel-lin-180816242/">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?hl=en&user=6sX01ywAAAAJ">Google Scholar</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero-divider"><hr></div>
+
+  <!-- ===== LOWER: Tabbed folders ===== -->
+  <main class="tabs-section">
+    <div class="tabs-container">
+
+      <!-- Tab buttons styled as folder tabs -->
+      <div class="tab-bar">
+        <button class="tab active" data-tab="publications">Publications</button>
+        <button class="tab" data-tab="projects">Projects</button>
+        <button class="tab" data-tab="teaching">Teaching</button>
+      </div>
+
+      <!-- Tab panels -->
+      <div class="tab-panel active" id="publications">
+        <div class="pub-list">
+          <!-- Clickable publications: replace # with your actual URLs -->
+          <a href="https://arxiv.org/abs/2511.05550" class="pub-item" target="_blank">
+            <span class="pub-title">Assessing Factual Music Comprehension in Large Audio Language Models</span>
+            <span class="pub-authors"><strong>Daniel Chenyu Lin</strong>, Michael Freeman, John Thickstun</span>
+            <span class="pub-venue">Under review at ISMIR 2026</span>
+          </a>
+          <a href="https://arxiv.org/abs/2605.24193" class="pub-item" target="_blank">
+            <span class="pub-title">Music Transcription with (Almost) No Supervision</span>
+            <span class="pub-authors">Saebyeol Shin, Chao Wan, Zhenzhen Liu, Justin Lovelace, <strong>Daniel C. Lin</strong>, Kilian Q. Weinberger, John Thickstun</span>
+            <span class="pub-venue">Under review at NeurIPS 2026</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="projects">
+        <!-- Clickable cards: replace # with your actual URLs -->
+        <a href="https://github.com/DCL2004/Operation-No-Eve" class="project-card" target="_blank">
+          <h3>Operation No Eve</h3>
+          <p class="meta">By Daniel Lin and Irene Xu</p>
+          <p>
+            This system builds a more secure communication between two devices. 
+            It provides a layer of protection on the message being transmitted by adding encryption and decryption processes before and after it gets to the I2C circuit. 
+            This process makes the exposed message safer to eavesdroppers because without the encryption key, the eavesdroppers would need to guess among the countless possibilities. 
+            The goal is to stop the eavesdropper, who receives the message along with the intended receiver, from understanding it.
+          </p>
+        </a>
+      </div>
+
+      <div class="tab-panel" id="teaching">
+        <h3>Teaching Assistantships</h3>
+        <ul class="teaching-list">
+          <li>
+            <span class="course">ECE 5620/ECE 7620: Information Theory and Generative Modeling</span>
+            <span class="semester">Fall 2026</span>
+          </li>
+          <li>
+            <span class="course">CS 4782/CS 5782: Introduction to Deep Learning</span>
+            <span class="semester">Spring 2026</span>
+          </li>
+          <li>
+            <span class="course">CS 3780/CS 5780: Introduction to Machine Learning</span>
+            <span class="semester">Fall 2025</span>
+          </li>
+          <li>
+            <span class="course">CS 1109: Foundational Programming Concepts</span>
+            <span class="semester">Summer 2025</span>
+          </li>
+        </ul>
+
+        <h3>Reading Groups</h3>
+        <ul class="teaching-list">
+          <li>
+            <span class="course">Theory of Generative Modeling (CS 7792)</span>
+            <span class="semester">Spring 2026</span>
+          </li>
+          <li>
+            <span class="course">Music Technology</span>
+            <span class="semester">Fall 2024, Spring 2025</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Daniel Chenyu Lin</p>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.tab-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
