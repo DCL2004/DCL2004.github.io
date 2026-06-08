@@ -518,6 +518,11 @@ footer {
     text-align: center;
   }
 
+  .hero-text p {
+    text-align: left;
+    hyphens: manual;
+  }
+
   .hero-text h1::after {
     margin-left: auto;
     margin-right: auto;
