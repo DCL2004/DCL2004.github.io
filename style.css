@@ -447,6 +447,46 @@ a.project-card:hover {
   margin-bottom: 0.5rem;
 }
 
+/* --- Notes --- */
+a.note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  border-left: 2px solid var(--color-border);
+  border-radius: 0 6px 6px 0;
+  background: rgba(74, 99, 150, 0.015);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+a.note-item:hover {
+  border-left-color: var(--color-accent);
+  background: rgba(74, 99, 150, 0.05);
+  color: inherit;
+}
+
+a.note-item:last-child {
+  margin-bottom: 0;
+}
+
+.note-title {
+  font-weight: 600;
+  color: var(--color-heading);
+  font-size: 0.98rem;
+}
+
+.note-meta {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
 /* --- Teaching --- */
 .tab-panel h3 {
   font-family: var(--font-heading);
@@ -519,7 +559,7 @@ footer {
   }
 
   .hero-text p {
-    text-align: center;
+    text-align: left;
     hyphens: manual;
   }
 
@@ -549,6 +589,13 @@ footer {
 
   a.pub-item,
   .project-card {
+    padding: 0.75rem 1rem;
+  }
+
+  a.note-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
     padding: 0.75rem 1rem;
   }
 
